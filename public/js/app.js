@@ -35,7 +35,6 @@ buttons.forEach(button => {
   })
 });
 
-
 pRegister.addEventListener("click", () => {
   bsModalLogin.hide();
   callModalRegister();

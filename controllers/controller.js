@@ -149,7 +149,7 @@ function authenticateToken(req, res) {
           const user = { name: email };
           const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
           res.json({ accessToken: accessToken });
-          console.log("Resposta da consulta à base de dados: ");
+          console.log("Database query response: ");
           console.log(JSON.stringify(data));
         } else {
           console.log("Incorrect Password");

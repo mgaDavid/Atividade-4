@@ -32,11 +32,6 @@ const newspapers = [
         base:'https://edition.cnn.com'
     },
     {
-        name:'nytimes',
-        address: 'https://www.nytimes.com/section/science',
-        base:'https://www.nytimes.com'
-    },
-    {
         name:'abcnews',
         address: 'https://abcnews.go.com/Technology',
         base:''

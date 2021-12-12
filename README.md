@@ -4,7 +4,7 @@
 
 Comentários sobre o funcionamento da API:
 
-- Não esqueça de fazer o npm i antes de correr o programa :)
+- Não se esqueça de fazer o npm i antes de correr o programa :)
 
 - Para aceder ao front-end: http://localhost:8000
 

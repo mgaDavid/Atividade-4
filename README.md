@@ -4,6 +4,10 @@
 
 Comentários sobre o funcionamento da API:
 
+- Não se esqueça de fazer o npm i antes de correr o programa :)
+
+- Para aceder ao front-end: http://localhost:8000
+
 - Após o registo de um novo utilizador, deverá ir ao terminal do seu IDE e fazer ctrl+click no URL com o formato:  https://ethereal.email/message/... e ativar a conta criada.
 
 - Existe uma conta teste já criada:

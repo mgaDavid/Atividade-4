@@ -169,15 +169,30 @@ function authenticateToken(req, res) {
                     $('a:contains("space")', html).each(function () {
                         const title = $(this).text()
                         const url = $(this).attr('href')
-                        articles.push({
-                            title,
-                            url: newspaper.base + url,
-                            source: newspaper.name
+                        const thisArticle = {
+                          title,
+                          url: newspaper.base + url,
+                          source: newspaper.name
+                        };
+              
+                        let isMapped = false;
+              
+                        for (let article of articles) {
+                          if (article.url == thisArticle.url) {
+                            isMapped = true;
+                            break;
+                          }
+                        };
+              
+                        if (!isMapped) {
+                          articles.push(thisArticle)
+                        };
+              
+                      })
+              
                     })
                 })
-            })
-        })
-        return res.send(articles);
+                return res.send(articles);
     };
 
     exports.findOne = (req, res) => {

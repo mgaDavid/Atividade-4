@@ -175,11 +175,17 @@ async function getNews() {
 
 async function getNewsById(id) {
   const tag = document.getElementById("tag").value;
+  const tags = ["", "bbc", "euronews", "foxnews", "livescience", "cnn", "abcnews"];
   listNews.style.display = "block";
   listNews.innerHTML = "";
   let url = urlBase + "/news";
   let text = "";
   var myHeaders = new Headers();
+
+  if(!tags.includes(tag)){
+    alert("Tags: bbc, euronews, foxnews, livescience, cnn, abcnews");
+    return;
+  }
   
 
   if (id != "") {

@@ -102,7 +102,7 @@ function validateLogin() {
   let password = document.getElementById("passwordLogin").value;
   if (password.length < 4) {
     document.getElementById("passErrorLogin").innerHTML =
-      "A senha tem de ter ao menos 4 carateres";
+      "The password must have at least 4 characters";
     return;
   }
   const statLogin = document.getElementById("statusLogin");

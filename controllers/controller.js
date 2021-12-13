@@ -209,11 +209,24 @@ function authenticateToken(req, res) {
                 $('a:contains("space")', html).each(function () {
                     const title = $(this).text()
                     const url = $(this).attr('href')
-                    specificArticles.push({
-                        title,
-                        url: newspaperBase + url,
-                        source: newspaperId
-                    })
+                    const thisArticle = {
+                      title,
+                      url: newspaperBase + url,
+                      source: newspaperId
+                    };
+
+                    let isMapped = false;
+
+                    for (let article of specificArticles) {
+                      if (article.url == thisArticle.url) {
+                        isMapped = true;
+                        break;
+                      }
+                    };
+
+                    if (!isMapped) {
+                      specificArticles.push(thisArticle)
+                    };
                 })
                 res.json(specificArticles)
             }).catch(err => console.log(err))
